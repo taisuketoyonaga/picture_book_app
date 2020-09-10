@@ -9,7 +9,7 @@
  |profile  | text   |            |
  
 
-association　
+association
 - has_many :contents
 - has_many :comments
 
@@ -26,8 +26,9 @@ association　
 association 
 - has_many :comments
 - belongs_to :user
+- has_one_attached :image
 
-# comments　テーブル
+# comments テーブル
  |column    | type       | options                       |
  |----------|------------|-------------------------------|
  | comment  | text       | null:false                    |
