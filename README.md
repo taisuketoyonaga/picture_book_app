@@ -3,7 +3,6 @@
 # usersテーブル
  | column  | type   |  options   |
  |---------|--------|------------|
- |nickname | string | null:false |
  |name     | string | null:false |
  |email    | string | null:false |
  |profile  | text   |            |
@@ -18,7 +17,7 @@ association
  |column | type       | options                       |
  |-------|------------|-------------------------------|
  |name   | string     |  null:false                   |
- |kind   | string     |                               |
+ |kind   | integer    |  null:false                   |  <ActiveHash使用予定>
  |place  | text       |                               |
  |memo   | text       |                               |
  |user   | references | null:false, foreign_key: true |
