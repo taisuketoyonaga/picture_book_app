@@ -1,0 +1,18 @@
+<header class = header>
+  <div class = "main-title">
+  <%# 生き物図鑑の表記はimageで最終表示 %>
+    <h1>生き物図鑑</h1>
+  </div>
+<%= form_with( local: true, method: :get, class: "search-form") do |form| %> <%#url指定あとでする %>
+  <%= form.text_field :keyword, placeholder: "生き物名で探す", class: "search-input" %>
+  <%= form.submit "探す", class: "search-btn" %>
+<% end %>
+<%# kind place カラムにはないがcolorとかでも検索できたら面白そう%>
+<%# 検索はransackを使おうと思う%>
+
+<%# マイページではログアウトのみ表示、トップページではログインと新規登録%>
+  <div class ="user-session">
+    <a class = "login" href = "#">ログイン</a>
+    <a class = "signin" href = "#">新規登録</a>
+  </div>
+</header>
