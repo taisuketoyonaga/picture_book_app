@@ -1,5 +1,4 @@
 .header{
-  background-color: burlywood;
   height: 20vh ;
   display: flex;
   justify-content: space-between;
@@ -8,19 +7,18 @@
 .main-title{
   height: 100%;
   width: 200px;
-  background-color: chocolate;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .main-title h1{
   font-size: 36px;
+
 }
 .search-form{
   width: calc(100% - 400px);
 }
 .user-session{
-  background-color: coral;
   height: 100%;
   width: 200px;
   display: flex;
@@ -29,11 +27,11 @@
 }
 .login{
   text-decoration: none ;
-  color: black;
+  color:darkkhaki ;
   font-size: 20px;
 }
 .signin{
   text-decoration: none;
-  color: black;
+  color: darkkhaki;
   font-size: 20px;
 }
