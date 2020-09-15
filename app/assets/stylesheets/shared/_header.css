@@ -25,6 +25,15 @@
   justify-content: space-around;
   align-items: center;
 }
+.new-post{
+  text-decoration: none;
+  color: black;
+  background-color: darkkhaki;
+  padding: 10px 10px;
+  white-space: nowrap;
+  font-size: 20px;
+
+}
 .login{
   text-decoration: none ;
   color:darkkhaki ;
