@@ -1,0 +1,46 @@
+.header{
+  height: 20vh ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-title{
+  height: 100%;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-title h1{
+  font-size: 36px;
+
+}
+.search-form{
+  width: calc(100% - 400px);
+}
+.user-session{
+  height: 100%;
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.new-post{
+  text-decoration: none;
+  color: black;
+  background-color: darkkhaki;
+  padding: 10px 10px;
+  white-space: nowrap;
+  font-size: 20px;
+
+}
+.login{
+  text-decoration: none ;
+  color:darkkhaki ;
+  font-size: 20px;
+}
+.signin{
+  text-decoration: none;
+  color: darkkhaki;
+  font-size: 20px;
+}

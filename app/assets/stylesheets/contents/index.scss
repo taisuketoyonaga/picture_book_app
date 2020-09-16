@@ -1,0 +1,18 @@
+.top-wrapper{
+  background-image: image-url('desk3.png');
+  background-size: cover;
+}
+
+.wrapper{
+  display: flex;
+  height:70vh;
+  
+}
+.side_bar{
+  width: 200px;  
+}
+.main{
+  width: calc(100% - 200px);
+  background-image: image-url('book3.png');
+  background-size:100% 100% ;
+}
