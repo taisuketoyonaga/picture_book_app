@@ -12,9 +12,8 @@
 </div>
 
 <div class = "kind-form">
-<%= f.label :kind, "種類"%>
-<%#プルダウンで表示する ActiveHashを使用する%>
-<%= f.text_field :kind, class: "kind-name"%>
+<%= f.label :kind_id, "種類"%>
+<%= f.collection_select(:kind_id, Kind.all, :id, :name, {},{class: "kind-select"})%>
 </div>
 
 <div class = "place-form">
@@ -29,10 +28,10 @@
 
 <div class = "memo-form">
 <%= f.label :memo, "メモ"%>
-<%= f.text_field :memo, class: "momo",placeholder: "コメントを入力してね"%>
+<%= f.text_area :memo, class: "momo",placeholder: "コメントを入力してね"%>
 </div>
 
 <div class = "submit-btn">
-<%=f.submit "登録する" %>
+<%=f.submit "図鑑に追加！" %>
  </div>
 <% end %>
