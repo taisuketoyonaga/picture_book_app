@@ -1,1 +1,13 @@
-生き物一覧
+<% @content.each do |content|%>
+  <li class = "item-list">
+    
+     <div class = "content-image">
+      <%=image_tag content.image,class:"item-image" %>
+      </div>
+      <div class = "item-info">
+    <div class = "item_name">
+      <%= content.name%>
+      </div>
+      </div>
+  </li>
+<% end %>

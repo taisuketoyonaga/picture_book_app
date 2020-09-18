@@ -15,4 +15,23 @@
   width: calc(100% - 200px);
   background-image: image-url('book3.png');
   background-size:100% 100% ;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.item-list{
+  width: 7vw;
+  height: 30vh;
+  margin-left: 20px;
+}
+
+.item-image {
+  width: 100px;
+  height: 150px;
+}
+
+.item-info{
+  display: flex;
+  justify-content: center;
 }

@@ -9,11 +9,12 @@
       <% end %>
            <%# kind place カラムにはないがcolorとかでも検索できたら面白そう%>
            <%# 検索はransackを使おうと思う%>
-      <%= link_to "新しい生き物", new_content_path, class: "new-post"%>
-      <%#a href = "#" class = "new-post">新しい生き物</a><%#link_toメソッドに変更する%>
 
-           <%# マイページではログアウトのみ表示、トップページではログインと新規登録%>
+           
     <% if user_signed_in?%>
+   
+    <%#= link_to "自分の図鑑を見る",class = "to-mypage"%>
+    <%= link_to "新しい生き物", new_content_path, class: "new-post"%>
       <div class = logout>
       <%= link_to 'ログアウト',  destroy_user_session_path, method: :delete %>
       </div>
