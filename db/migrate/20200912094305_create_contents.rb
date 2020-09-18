@@ -2,7 +2,7 @@ class CreateContents < ActiveRecord::Migration[6.0]
   def change
     create_table :contents do |t|
       t.string :name, null: false
-      t.integer :kind, null: false
+      t.integer :kind_id, null: false
       t.text :place
       t.text :memo
       t.date :date
