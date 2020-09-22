@@ -1,6 +1,5 @@
 class ContentsController < ApplicationController
    before_action :set_params, only: :show
-   before_action :content_parameter, only: :show
 
   def index
      @content = Content.all
