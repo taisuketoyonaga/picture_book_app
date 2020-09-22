@@ -1,7 +1,8 @@
-<header class = header>
+<div class = top-wrapper>
+  <header class = header>
     <div class = "main-title">
-      <%# 生き物図鑑の表記はimageで最終表示 %>
-      <h1>生き物図鑑</h1>
+      
+     <%= "#{current_user.name}の図鑑"%>
     </div>
       <%= form_with( local: true, method: :get, class: "search-form") do |form| %> <%#url指定あとでする %>
         <%= form.text_field :keyword, placeholder: "生き物名で探す", class: "search-input" %>
@@ -12,7 +13,7 @@
 
            
     <% if user_signed_in?%>
-   <%= link_to "自分の図鑑を見る",user_path(current_user.id),class: "to-mypage"%>
+   <%= link_to "みんなの図鑑を見る",root_path,class: "to-mypage"%>
     <%= link_to "新しい生き物", new_content_path, class: "new-post"%>
       <div class = logout>
       <%= link_to 'ログアウト',  destroy_user_session_path, method: :delete %>
@@ -24,3 +25,13 @@
       </div>
     <% end %>
 </header>
+  <div class = "wrapper">
+    <div class = "side_bar">
+      <%= render "contents/side_bar"%>
+    </div>
+    <div class ="main">
+      <%=render "contents/main"%>
+    </div>
+  </div>
+  <%= render  "shared/footer"%>
+</div>
