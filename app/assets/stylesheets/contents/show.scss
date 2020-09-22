@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.left-lists{
+.left-page{
   height: 100%;
   width: 50%;
   padding: 5%;
@@ -50,11 +50,13 @@ width: 100% ;
 .item-place{
   width: 40%;
   height: 100%;
-  overflow: scroll;
+
 }
 .place{
-  height: 1000px;
+  height: 100%;
   width: 100%;
+  padding: 10%;
+  overflow: scroll;
 }
 .show-date{
   height: 20%;
@@ -66,14 +68,17 @@ width: 100% ;
   width: 30%;
   font-size: 20px;
 }
-.right-lists{
+.right-page{
   height: 100%;
   width: 50%;
+}
+.right-lists{
+  height: 100%;
 }
 .show-image{
   height: 70%;
   width: 30%;
-  padding: 40px 0 30px;
+  padding-top: 40px ;
   margin: 0 auto;
 
 }
@@ -82,10 +87,12 @@ width: 100% ;
   height: 20%;
   width: 100%;
   overflow: scroll;
+
 }
 .memo-area{
   height: 100%;
   width: 100%;
-  padding: 0 20% 20%;
+  padding: 0 15% 20%;
+
 
 }
