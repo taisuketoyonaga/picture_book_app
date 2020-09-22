@@ -1,0 +1,61 @@
+<div class = top-wrapper>
+  <%= render "shared/header"%>
+  <div class = "wrapper">
+    <div class = "side_bar">
+      <%= render "side_bar"%>
+    </div>
+    <div class = "show-main">
+      <ul class = "left-lists">
+        <li class ="show-name">
+          <div class = "list-name">
+          名前
+          </div>
+          <div class = "item-name">
+          <%= @content.name %>
+          </div>
+        </li>
+        <li class = "show-kind">
+          <div class = "list-kind">
+          種類
+          </div>
+          <div class = "item-kind">
+          <%= Kind.data[@content.kind_id - 1][:name]%>
+          </div>
+        </li>
+        
+        <li class = "show-date">
+        <div class = "list-date">
+        見つけた日
+        </div>
+        <div class = "item-date">
+          <%= @content.date %>
+        </div>
+        </li>
+        <li class = "show-place">
+        <div class = list-place>
+        見つけた場所
+        </div>
+        <div class = "item-place">
+        <div class = "place">
+          <%= @content.place %>
+          </div>
+        </div>
+        </li>
+      </ul>
+      <ul class = "right-lists">
+        <li class = "show-image">
+          <%= image_tag @content.image %>
+        </li>
+        <li class = "show-memo">
+        <div class = "memo-area">
+        メモ：
+       <div class = "memo">
+        <%= @content.memo %>
+        </div>
+         </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <%= render  "shared/footer"%>
+</div>
