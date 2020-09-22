@@ -1,5 +1,5 @@
 class ContentsController < ApplicationController
-   before_action :set_params, only: :show
+   before_action :set_params, only: [:show, :edit, :update]
 
   def index
      @content = Content.all
@@ -21,11 +21,22 @@ class ContentsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @content.update(content_parameter)
+      redirect_to content_path
+    else
+      render :edit
+    end
+  end
+
 
 private
   
   def content_parameter
-    params.permit(:id, :image, :name, :kind_id, :place, :date, :memo).merge(user_id: current_user.id)
+    params.require(:content).permit(:image, :name, :kind_id, :place, :date, :memo).merge(user_id: current_user.id)
   end
 
   def set_params

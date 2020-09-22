@@ -5,6 +5,7 @@
       <%= render "side_bar"%>
     </div>
     <div class = "show-main">
+    <div class = "left-page">
       <ul class = "left-lists">
         <li class ="show-name">
           <div class = "list-name">
@@ -22,7 +23,6 @@
           <%= Kind.data[@content.kind_id - 1][:name]%>
           </div>
         </li>
-        
         <li class = "show-date">
         <div class = "list-date">
         見つけた日
@@ -41,7 +41,16 @@
           </div>
         </div>
         </li>
+              <div class = "content-edit">
+      <%= link_to "図鑑を書きなおす",edit_content_path(@content.id) %>
+      </div>
       </ul>
+      
+      </div>
+
+
+
+      <div class = "right-page">
       <ul class = "right-lists">
         <li class = "show-image">
           <%= image_tag @content.image %>
@@ -55,6 +64,7 @@
          </div>
         </li>
       </ul>
+      </div>
     </div>
   </div>
   <%= render  "shared/footer"%>
