@@ -1,5 +1,5 @@
 class ContentsController < ApplicationController
-   before_action :set_params, only: [:show, :edit, :update]
+   before_action :set_params, only: [:show, :edit, :update, :destroy]
 
   def index
      @content = Content.all
@@ -30,6 +30,16 @@ class ContentsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+
+    if @content.destroy
+      redirect_to user_path(id: current_user.id)
+    else
+      render :show
+    end
+
   end
 
 
