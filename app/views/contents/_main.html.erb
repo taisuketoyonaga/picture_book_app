@@ -1,14 +1,14 @@
-<% @content.each do |content|%>
-  <li class = "item-list">
-     <%= link_to content_path(content.id) do%>  
-     <div class = "content-image">
-        <%= image_tag content.image, class:"item-image"%>
-        <div class = "item-info">
-          <div class = "item_name">
-            <%= content.name%>
+  <% @content.each do |content|%>
+    <div class = "item-list">
+      <%= link_to content_path(content.id) do%>  
+      <div class = "content-image">
+          <%= image_tag content.image, class:"item-image"%>
+          <div class = "item-info">
+            <div class = "item_name">
+              <%= content.name%>
+            </div>
           </div>
-        </div>
-     </div>
-     <% end %>
-  </li>
-<% end %>
+      </div>
+      <% end %>
+    </div>
+  <% end %>
