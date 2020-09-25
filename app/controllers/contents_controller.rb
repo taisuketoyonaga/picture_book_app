@@ -33,13 +33,15 @@ class ContentsController < ApplicationController
   end
 
   def destroy
-
     if @content.destroy
       redirect_to user_path(id: current_user.id)
     else
       render :show
     end
+  end
 
+  def search
+    @content = Content.search(params[:keyword])
   end
 
 
