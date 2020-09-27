@@ -9,10 +9,10 @@
   
 }
 .side_bar{
-  width: 200px;  
+  width: 15%;  
 }
 .main{
-  width: calc(100% - 200px);
+  width: 85%;
   background-image: image-url('book3.png');
   background-size:100% 100% ;
   display: flex;
