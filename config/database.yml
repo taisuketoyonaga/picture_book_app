@@ -50,8 +50,9 @@ test:
 production:
   <<: *default
   database: picture_book_app_production
-  username: picture_book_app
-  password: <%= ENV['PICTURE_BOOK_APP_DATABASE_PASSWORD'] %>
+  #username: picture_book_app
+  #password: <%= ENV['PICTURE_BOOK_APP_DATABASE_PASSWORD'] %>
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
+
