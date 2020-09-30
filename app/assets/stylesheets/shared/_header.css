@@ -1,38 +1,116 @@
 .header{
   height: 20vh ;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+}
+.header_left{
+  height: 100%;
+  width: 200px;
+  display: flex;
 }
 .main-title{
   height: 100%;
-  width: 200px;
+  width: 70%;
+  color: burlywood;
+  font-size: 25px;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.main-title h1{
-  font-size: 36px;
-
+.title_logo {
+ width: 30%;
+ height: 100%;
 }
-.search-form{
-  width: calc(100% - 400px);
+.title_logo img{
+height: 100%;
+width: 100%;
+padding: 20px 0;
 }
-.user-session{
+.header_right{
   height: 100%;
-  width: 200px;
+  width: calc(100% - 200px);
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
 }
-
+.all_article{
+  background-color: yellowgreen;
+  margin: 0 20px;
+  height: 30%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow:3px 3px  gold;
+}
+.all_article a{
+  font-size: 3vw 3vh;
+  text-decoration: none;
+  color: black;
+}
+.my_article{
+  background-color: mediumseagreen;
+  margin: 0 20px;
+  height: 30%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow:3px 3px  gold;
+}
+.my_article a{
+  font-size: 3vw 3vh;
+  text-decoration: none;
+  color:black;
+}
+.logout{
+  background-color:olivedrab ;
+  margin: 0 20px;
+  height: 30%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow:3px 3px  gold;
+}
+.logout a{
+  font-size: 3vw 3vh;
+  text-decoration: none;
+  color:black;
+}
 .login{
-  text-decoration: none ;
-  color:darkkhaki ;
-  font-size: 20px;
+  background-color: yellowgreen;
+  margin: 0 20px;
+  height: 30%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow:3px 3px  gold;
+}
+.login a{
+  font-size: 3vw 3vh;
+  text-decoration: none;
+  color:black;
 }
 .signin{
+  background-color: mediumseagreen;
+  margin: 0 20px;
+  height: 30%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow:3px 3px  gold;
+}
+.signin a{
+  font-size: 3vw 3vh;
   text-decoration: none;
-  color: darkkhaki;
-  font-size: 20px;
+  color:black;
 }

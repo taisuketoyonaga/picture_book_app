@@ -1,4 +1,5 @@
 <header class = header>
+  <div class = 'header_left'>
     <div class = "main-title">
       <% if user_signed_in?%>
       <%= "#{current_user.name}の図鑑"%>
@@ -6,16 +7,29 @@
       <h1>生き物図鑑</h1>
       <% end %>
     </div>
+    <div class = 'title_logo'>
+    <%= image_tag 'tentoumusi'%>
+    </div>
+  </div>
+
+  <div class = 'header_right'>
     <% if user_signed_in?%>
-    <%= link_to "みんなの図鑑を見る", root_path%>
-   <%= link_to "自分の図鑑を見る",user_path(current_user.id),class: "to-mypage"%>
-      <div class = logout>
+    <div class = 'all_article'>
+      <%= link_to "みんなの図鑑を見る", root_path%>
+    </div>
+    <div class = 'my_article'>
+      <%= link_to "自分の図鑑を見る",user_path(current_user.id) %>
+    </div>
+    <div class = logout>
       <%= link_to 'ログアウト',  destroy_user_session_path, method: :delete %>
-      </div>
+    </div>
     <% else %>
-      <div class ="user-session">
-        <%= link_to 'ログイン', user_session_path, class: "login"%>
-        <%= link_to '新規登録',  new_user_registration_path, class: "signin" %>
+      <div class = 'login'>
+        <%= link_to 'ログイン', user_session_path %>
+      </div>
+      <div class = 'signin'>
+        <%= link_to '新規登録',  new_user_registration_path%>
       </div>
     <% end %>
+  </div>
 </header>
