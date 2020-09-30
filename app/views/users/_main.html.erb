@@ -34,7 +34,7 @@
       虫の数
       </div>
       <div class = 'count_insects'>
-        <%= "#{Content.where(kind_id:1).length}種類"%>
+        <%= "#{@content.where(kind_id:1).length}種類"%>
       </div>
     </div>
     <div class = 'animals'>
@@ -42,7 +42,7 @@
       動物の数
       </div>
       <div class = 'count_animals'>
-      <%= "#{Content.where(kind_id:2).length}種類"%>
+      <%= "#{@content.where(kind_id:2).length}種類"%>
       </div>
     </div>
     <div class = 'birds'>
@@ -50,7 +50,7 @@
       鳥の数
       </div>
       <div class = 'count_birds'>
-      <%= "#{Content.where(kind_id:3).length}種類"%>
+      <%= "#{@content.where(kind_id:3).length}種類"%>
       </div>
     </div>
     <div class = 'reptiles'>
@@ -58,7 +58,7 @@
       は虫類の数
       </div>
       <div class = 'count_reptiles'>
-      <%= "#{Content.where(kind_id:4).length}種類"%>
+      <%= "#{@content.where(kind_id:4).length}種類"%>
       </div>
     </div>
     <div class = 'amphibians'>
@@ -66,7 +66,7 @@
       両生類の数
       </div>
       <div class = 'count_amphibians'>
-      <%= "#{Content.where(kind_id:5).length}種類"%>
+      <%= "#{@content.where(kind_id:5).length}種類"%>
       </div>
     </div>
     <div class = 'fish'>
@@ -74,7 +74,7 @@
       魚の数
       </div>
       <div class = 'count_fish'>
-      <%= "#{Content.where(kind_id:6).length}種類"%>
+      <%= "#{@content.where(kind_id:6).length}種類"%>
       </div>
     </div>
     <div class = 'others'>
@@ -82,7 +82,7 @@
       その他の数
       </div>
       <div class = 'count_others'>
-      <%= "#{Content.where(kind_id:7).length}種類"%>
+      <%= "#{@content.where(kind_id:7).length}種類"%>
       </div>
     </div>
     <div class = 'unknown'>
@@ -90,7 +90,7 @@
       わからない数
       </div>
       <div class = 'count_unknown'>
-      <%= "#{Content.where(kind_id:8).length}種類"%>
+      <%= "#{@content.where(kind_id:8).length}種類"%>
       </div>
     </div>
   </div>

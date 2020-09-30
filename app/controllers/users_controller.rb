@@ -3,8 +3,9 @@ class UsersController < ApplicationController
   before_action :search_content, only: [:show, :search]
 
   def show
-    user = User.find(params[:id])
-    @content = user.contents
+    @user = User.find(params[:id])
+    @content = @user.contents
+
   end
 
   def search

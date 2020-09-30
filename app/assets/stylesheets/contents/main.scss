@@ -1,0 +1,134 @@
+.page_all{
+  height: 100%;
+  width: 100%;
+  display: flex;
+ overflow: hidden;
+}
+.index_left{
+ height: 100%;
+ width: 50%;
+ padding-right: 6%;
+overflow: scroll;
+}
+.item-list{
+  height: 25%;
+  display: flex;
+  margin: 5% 5% 5% 10%;
+}
+.content-image img{
+  height: 100px;
+  width: 100px;
+}
+
+.item_name {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 4vh;
+  margin:0 5% 0 8% ;
+  flex-wrap: wrap;
+}
+
+.index_right{
+  height: 100%;
+  width: 50%;
+  padding-left: 8%;
+}
+.all{
+height: 20%;
+display: flex;
+align-items: center;
+font-size: 3vh;
+}
+.all_tag{
+  width: 60%;
+}
+.count_all{
+ width: 40%;
+}
+
+.insects{
+  height: 10%;
+  display: flex;
+}
+.insects_tag{
+  width: 60%;
+}
+.count_insects{
+ width: 40%;
+}
+.animals{
+  height: 10%;
+  display: flex;
+}
+.animals_tag{
+  width: 60%;
+}
+.count_animals{
+width: 40%;
+}
+.birds{
+  height: 10%;
+  display: flex;
+}
+.birds_tag{
+  width: 60%;
+}
+.count_birds{
+width: 40%;
+}
+.reptiles{
+  height: 10%;
+  display: flex;
+}
+.reptiles_tag{
+  width: 60%;
+}
+.count_reptiles{
+width: 40%;
+}
+.amphibians{
+  height: 10%;
+  display: flex;
+}
+.amphibians_tag{
+  width: 60%;
+}
+.count_amphibians{
+width: 40%;
+}
+.fish{
+  height: 10%;
+  display: flex;
+}
+.fish_tag{
+  width: 60%;
+}
+.count_fish{
+width: 40%;
+}
+.others{
+  height: 10%;
+  display: flex;
+}
+.others_tag{
+  width: 60%;
+}
+.count_others{
+width: 40%;
+}
+.unknown{
+  height: 10%;
+  display: flex;
+}
+.unknown_tag{
+  width: 60%;
+}
+.count_unknown{
+width: 40%;
+}
+
