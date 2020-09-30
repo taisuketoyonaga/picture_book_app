@@ -1,0 +1,87 @@
+.side_bar_wrapper{
+  height: 100%;
+  width: 100%;
+padding: 5% 2%;
+}
+.add_article{
+  height: 15%;
+  width: 100%;
+  display: flex;
+}
+.new_post{
+  height: 100%;
+  width: 75%;
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  box-shadow: 3px 3px firebrick;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new_post a{
+  text-decoration: none;
+  color:black;
+  font-size: 18px;
+}
+.pencil{
+  height: 80%;
+  width: 25%;
+}
+.pencil img{
+  height: 100%;
+  width: 100%;
+}
+.search_forms{
+  height: 80%;
+  width: 100%;
+}
+.content_search{
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+}
+.name_search{
+ height: 15%;
+ width: 100%;
+ padding: 10px 0;
+ color:gold;
+}
+.name_search_input{
+  width: 100%;
+ }
+.kind_search{
+  height: 15%;
+  width: 100%;
+  padding: 10px 0;
+  color:gold;
+}
+.kind_search_input{
+  width: 100%;
+}
+.place_search{
+  height: 15%;
+  width: 100%;
+  padding: 10px 0;
+  color:gold;
+}
+.place_search_input{
+  width: 100%;
+}
+.date_search{
+  height: 25%;
+  width: 100%;
+  padding: 10px 0;
+  color:gold;
+}
+.date_from_search_input{
+  width: 100%;
+}
+.date_end_search_input{
+  width: 100%;
+}
+.submit_btn{
+  height: 10%;
+  padding: 10px 0;
+}
+
