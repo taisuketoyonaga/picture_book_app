@@ -38,6 +38,7 @@
             <%= @content.place%>
             </div>
           </div>
+          <% if current_user == @content.user%>
           <div class = "edit_delete">
             <div class = "edit-tag">
             <%= link_to '図鑑を書き直す',edit_content_path(params[:id])%>
@@ -46,6 +47,7 @@
             <%=link_to '記事を消す',content_path(params[:id]),method: :delete %>
             </div>
           </div>
+          <% end %>
         </div>
         <div class = "right-page">
           <div class = "show-image">
