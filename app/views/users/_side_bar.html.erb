@@ -1,7 +1,7 @@
 <div class = "side_bar_wrapper">
   <div class = "side_bar_titles">
   <%= link_to "図鑑を追加", new_content_path, class: "new-post"%>
-        <%= search_form_for @q, url: search_contents_path do |f| %>
+        <%= search_form_for @q, url: users_search_content_path do |f| %>
         <div class = 'name_search'>
         名前で探す
         <% f.label :name_cont %>

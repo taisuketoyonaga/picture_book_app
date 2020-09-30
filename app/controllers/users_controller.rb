@@ -4,16 +4,19 @@ class UsersController < ApplicationController
 
   def show
     user = User.find(params[:id])
-    @content = user.contents    
+    @content = user.contents
   end
 
   def search
     @content = @q.result
+    
   end
 
   private
   def search_content
-    @q = Content.ransack(params[:q])
+    user = User.find(params[:id])
+    content = user.contents
+    @q = content.ransack(params[:q])
   end
 
 end
