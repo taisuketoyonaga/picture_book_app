@@ -6,6 +6,27 @@
       <h1>生き物図鑑</h1>
       <% end %>
     </div>           
+    <div class = categories>
+    <%= search_form_for @q, url: search_contents_path do |f| %>
+     <%= f.radio_button :kind_id_eq, "#{Kind.data[0][:id]}"%>
+     虫
+     <%= f.radio_button :kind_id_eq, "#{Kind.data[1][:id]}"%>
+    動物
+     <%= f.radio_button :kind_id_eq, "#{Kind.data[2][:id]}"%>
+    鳥
+     <%= f.radio_button :kind_id_eq, "#{Kind.data[3][:id]}"%>
+    は虫類
+     <%= f.radio_button :kind_id_eq, "#{Kind.data[4][:id]}"%>
+    両生類
+     <%= f.radio_button :kind_id_eq, "#{Kind.data[5][:id]}"%>
+    魚
+     <%= f.radio_button :kind_id_eq, "#{Kind.data[6][:id]}"%>
+    その他
+     <%= f.radio_button :kind_id_eq, "#{Kind.data[7][:id]}"%>
+    わからない
+     <%= f.submit "探す"%>
+    <% end %>
+    </div>
     <% if user_signed_in?%>
     <%= link_to "みんなの図鑑を見る", root_path%>
    <%= link_to "自分の図鑑を見る",user_path(current_user.id),class: "to-mypage"%>

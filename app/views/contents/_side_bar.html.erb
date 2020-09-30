@@ -2,8 +2,24 @@
   <div class = "side_bar_titles">
   <%= link_to "新しい生き物", new_content_path, class: "new-post"%>
         <%= search_form_for @q, url: search_contents_path do |f| %>
+        <div class = 'name_search'>
+        名前で探す
         <% f.label :name_cont %>
-        <%= f.text_field :name_cont,placeholder: '名前で探す' %>
+        <%= f.search_field :name_cont,placeholder: '名前を入力' %>
+        </div>
+        <div class = 'place_search'>
+        場所で探す
+        <% f.label :place_cont %>
+        <%= f.search_field :place_cont,placeholder: '場所を入力'%>
+        </div>
+        <div class = date_search>
+        日にちで探す
+        <% f.search_field :date_gteq%>
+        <%= f.search_field :date_gteq,placeholder: 'この日から'  %>
+        <div>〜</div>
+        <% f.label :date_lteq %>
+        <%= f.search_field :date_lteq, placeholder: 'この日まで'%>
+        </div>
         <%= f.submit '探す'%>
       <% end %>
   
