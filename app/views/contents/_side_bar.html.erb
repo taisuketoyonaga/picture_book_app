@@ -1,31 +1,38 @@
 <div class = "side_bar_wrapper">
-  <div class = "side_bar_titles">
-  <%= link_to "図鑑を追加", new_content_path, class: "new-post"%>
+    <div class = 'add_article'>
+    <div class = 'new_post'>
+    <%= link_to "図鑑を追加", new_content_path%>
+    </div>
+    <div class = 'pencil'>
+    <%= image_tag "pencil.png"%>
+    </div>
+  </div>
         <%= search_form_for @q, url: search_contents_path do |f| %>
-        <div class = 'name_search'>
+                 <div class = 'name_search'>
         名前で探す
         <% f.label :name_cont %>
-        <%= f.search_field :name_cont,placeholder: '名前を入力' %>
+        <%= f.search_field :name_cont,placeholder: '名前を入力', class:'name_search_input' %>
         </div>
        <div class = 'kind_search'>
        種類で探す<br>
        <% f.label :kind_id_eq %>
-       <%= f.collection_select :kind_id_eq, Kind.all,:id,:name%>
+       <%= f.collection_select :kind_id_eq, Kind.all,:id,:name, class:'kind_search_input' %>
        </div>
         <div class = 'place_search'>
         場所で探す
         <% f.label :place_cont %>
-        <%= f.search_field :place_cont,placeholder: '場所を入力'%>
+        <%= f.search_field :place_cont,placeholder: '場所を入力',class:'place_search_input'%>
         </div>
         <div class = date_search>
         日にちで探す
         <% f.search_field :date_gteq%>
-        <%= f.search_field :date_gteq,placeholder: 'この日から'  %>
+        <%= f.search_field :date_gteq,placeholder: 'この日から',class:'date_from_search_input'%>
         <div>〜</div>
         <% f.label :date_lteq %>
-        <%= f.search_field :date_lteq, placeholder: 'この日まで'%>
+        <%= f.search_field :date_lteq, placeholder: 'この日まで', class:'date_end_search_input'%>
         </div>
-        <%= f.submit '探す'%>
+        <div class = 'submit_btn'>
+        <%= f.submit '探す',class:'search_submit'%>
+        </div>
       <% end %>
- </div>
 </div>
