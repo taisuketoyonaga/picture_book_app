@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
    before_action :set_params, only: [:show, :edit, :update, :destroy]
-
+   before_action :search_content, only: [:index, :show, :search]
   def index
      @content = Content.all
   end
@@ -41,7 +41,7 @@ class ContentsController < ApplicationController
   end
 
   def search
-    @content = Content.search(params[:keyword])
+    @content = @q.result
   end
 
 
@@ -53,5 +53,9 @@ private
 
   def set_params
     @content = Content.find(params[:id])
+  end
+
+  def search_content
+    @q = Content.ransack(params[:q])
   end
 end
