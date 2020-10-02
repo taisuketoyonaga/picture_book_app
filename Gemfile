@@ -73,3 +73,4 @@ end
 
 gem "aws-sdk-s3", require: false
 gem 'ransack'
+gem 'kaminari'

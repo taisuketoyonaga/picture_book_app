@@ -1,13 +1,13 @@
 <div class = "side_bar_wrapper">
   <div class = 'add_article'>
     <div class = 'new_post'>
-    <%= link_to "図鑑を追加", new_content_path%>
+    <%= link_to "図鑑を追加", new_user_path%>
     </div>
     <div class = 'pencil'>
     <%= image_tag "pencil.png"%>
     </div>
   </div>
-        <%= search_form_for @q, url: users_search_content_path do |f| %>
+        <%= search_form_for @q, url: users_search_users_path do |f| %>
          <div class = 'name_search'>
         名前で探す
         <% f.label :name_cont %>

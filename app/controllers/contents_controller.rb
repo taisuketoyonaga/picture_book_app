@@ -19,6 +19,7 @@ class ContentsController < ApplicationController
   end
 
   def show
+    
   end
 
   def edit
@@ -26,7 +27,7 @@ class ContentsController < ApplicationController
 
   def update
     if @content.update(content_parameter)
-      redirect_to content_path
+      redirect_to root_path
     else
       render :edit
     end
@@ -34,7 +35,7 @@ class ContentsController < ApplicationController
 
   def destroy
     if @content.destroy
-      redirect_to user_path(id: current_user.id)
+      redirect_to root_path
     else
       render :show
     end
@@ -44,7 +45,7 @@ class ContentsController < ApplicationController
     @content = @q.result
   end
 
-
+  
 private
   
   def content_parameter
