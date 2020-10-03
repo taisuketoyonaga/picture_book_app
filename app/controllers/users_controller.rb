@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :search_content, only: [:index, :show, :search]
   before_action :set_params, only: [:edit, :update, :show, :destroy]
   def index
-   @content = Content.where(user_id:current_user.id)
+    @content = Content.where(user_id: current_user.id)
   end
 
   def new
@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @content =  Content.create(content_parameter)
+    @content = Content.create(content_parameter)
     if @content.save
       redirect_to users_path
     else
@@ -20,7 +20,6 @@ class UsersController < ApplicationController
   end
 
   def show
-
   end
 
   def edit
@@ -39,14 +38,12 @@ class UsersController < ApplicationController
   end
 
   def destroy
-
     if @content.destroy
       redirect_to users_path(id: current_user.id)
     else
       render :show
     end
   end
-
 
   private
 
@@ -55,7 +52,7 @@ class UsersController < ApplicationController
   end
 
   def search_content
-    content = Content.where(user_id:current_user.id)
+    content = Content.where(user_id: current_user.id)
     @q = content.ransack(params[:q])
   end
 

@@ -1,8 +1,7 @@
-<%#= render "shared/header"%>
 <div class = "new-title">
 <h1>新しい生き物</h1>
 </div>
-<%= form_with model: @content,url:content_path(@content.id),locals: true do |f| %>
+<%= form_with model: @content,url:user_path,locals: true do |f| %>
 <%=f.label :image, "写真"%>
 <%= f.file_field :image ,class: "image-form"%>
 

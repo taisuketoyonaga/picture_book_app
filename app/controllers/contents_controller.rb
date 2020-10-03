@@ -1,8 +1,8 @@
 class ContentsController < ApplicationController
-   before_action :set_params, only: [:show, :edit, :update, :destroy]
-   before_action :search_content, only: [:index, :show, :search]
+  before_action :set_params, only: [:show, :edit, :update, :destroy]
+  before_action :search_content, only: [:index, :show, :search]
   def index
-     @content = Content.all
+    @content = Content.all
   end
 
   def new
@@ -10,7 +10,7 @@ class ContentsController < ApplicationController
   end
 
   def create
-    @content =  Content.create(content_parameter)
+    @content = Content.create(content_parameter)
     if @content.save
       redirect_to root_path
     else
@@ -19,7 +19,6 @@ class ContentsController < ApplicationController
   end
 
   def show
-    
   end
 
   def edit
@@ -45,9 +44,8 @@ class ContentsController < ApplicationController
     @content = @q.result
   end
 
-  
-private
-  
+  private
+
   def content_parameter
     params.require(:content).permit(:image, :name, :kind_id, :place, :date, :memo).merge(user_id: current_user.id)
   end
