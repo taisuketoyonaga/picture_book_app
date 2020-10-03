@@ -8,11 +8,14 @@
 ## 概要
  - 見つけた生き物の写真、名前、種類、見つけた場所、日にち、コメントを投稿できる。
  ![result](https://user-images.githubusercontent.com/69187127/94989628-387d0600-05b1-11eb-9b42-9fec14b10e62.gif)
- - 全てのユーザーの投稿した記事の一覧を見ることができる。
- - マイページで、自分の投稿した記事の一覧を見ることができる。
+ - 全てのユーザーと自分が投稿した記事の一覧表示を切り替えられる。
+<img width="618" alt="picture_book_sample3" src="https://user-images.githubusercontent.com/69187127/94989893-e0470380-05b2-11eb-8571-77c3b8a05a41.png">
  - 投稿内容の詳細を見ることができる。
  ![picture_book_sample1](https://user-images.githubusercontent.com/69187127/94989744-f6a08f80-05b1-11eb-8a17-5ac9824ed75f.jpg)
  - 名前、種類、場所、日にちで記事を検索することができる。
+ <img width="222" alt="picture_book_sample4" src="https://user-images.githubusercontent.com/69187127/94989916-13899280-05b3-11eb-94d9-b8ffe9b53329.png">
+ - 今どの種類の生き物を何種類見つけたかを確認できる。
+  <img width="609" alt="picture_book_sample2" src="https://user-images.githubusercontent.com/69187127/94989814-66af1580-05b2-11eb-98b0-8757a0860eb4.png">
 
 ## バージョン
  - ruby 2.6.5
