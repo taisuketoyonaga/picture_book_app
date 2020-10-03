@@ -12,8 +12,8 @@
  ![picture_book_sample1](https://user-images.githubusercontent.com/69187127/94989968-93aff800-05b3-11eb-84a7-5cceeafabc03.jpg)
  - 今どの種類の生き物を何種類見つけたかを確認できる。
   <img width="609" alt="picture_book_sample2" src="https://user-images.githubusercontent.com/69187127/94989814-66af1580-05b2-11eb-98b0-8757a0860eb4.png">
-  - マイページ（自分の図鑑）で自分の見つけた生き物の記事を、一覧表示できる。
-  - 名前、種類、場所、日にちで記事を検索することができる。
+ - マイページ（自分の図鑑）で自分の見つけた生き物の記事を、一覧表示できる。
+ - 名前、種類、場所、日にちで記事を検索することができる。
 
 ## バージョン
  - ruby 2.6.5
