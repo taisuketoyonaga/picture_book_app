@@ -7,7 +7,7 @@
 
 ## 概要
  - 見つけた生き物の写真、名前、種類、見つけた場所、日にち、コメントを投稿できる。
- ![result](https://user-images.githubusercontent.com/69187127/94989325-e2a75e80-05ae-11eb-823c-10a3dac1ff75.gif) 
+ ![result](https://user-images.githubusercontent.com/69187127/94989628-387d0600-05b1-11eb-9b42-9fec14b10e62.gif)
  - 全てのユーザーの投稿した記事の一覧を見ることができる。
  - マイページで、自分の投稿した記事の一覧を見ることができる。
  - 投稿内容の詳細を見ることができる。
