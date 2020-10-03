@@ -25,11 +25,11 @@
         </div>
         <div class = date_search>
         日にちで探す
-        <% f.search_field :date_gteq%>
-        <%= f.search_field :date_gteq,placeholder: 'この日から例)2020-09-12',class:'date_from_search_input'%>
+        <% f.label :date_gteq%>
+        <%= f.search_field :date_gteq,placeholder: '例)2020-09-12',class:'date_from_search_input'%>
         <div>〜</div>
         <% f.label :date_lteq %>
-        <%= f.search_field :date_lteq, placeholder: 'この日まで例)2020-09-13', class:'date_end_search_input'%>
+        <%= f.search_field :date_lteq, placeholder: '例)2020-09-13', class:'date_end_search_input'%>
         </div>
         <div class = 'submit_btn'>
         <%= f.submit '探す',class:'search_submit'%>
