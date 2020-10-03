@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :search_content, only: [:index, :show, :search]
   before_action :set_params, only: [:edit, :update, :show, :destroy]
   def index
-    @content = Content.where(user_id: current_user.id)
+    @content = Content.where(user_id: current_user.id).order(created_at: "DESC")
   end
 
   def new

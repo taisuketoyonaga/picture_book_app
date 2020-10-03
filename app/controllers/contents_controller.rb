@@ -2,7 +2,7 @@ class ContentsController < ApplicationController
   before_action :set_params, only: [:show, :edit, :update, :destroy]
   before_action :search_content, only: [:index, :show, :search]
   def index
-    @content = Content.all
+    @content = Content.all.order(created_at:'DESC')
   end
 
   def new
