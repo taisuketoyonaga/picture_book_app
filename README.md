@@ -1,4 +1,11 @@
-# README
+
+# PICTURE BOOK
+
+# 概要
+## 子供と一緒に出かけよう！
+ ・子供とのお出かけを、より楽しくする為に作りました！
+ ・自分の生き物図鑑を作ることができます。
+ ・動物園、水族館、虫取り等、生き物がいるところで
 
 # usersテーブル
  | column  | type   |  options   |
@@ -17,7 +24,7 @@ association
  |column | type       | options                       |
  |-------|------------|-------------------------------|
  |name   | string     |  null:false                   |
- |kind   | integer    |  null:false                   |  <ActiveHash使用予定>
+ |kind   | integer    |  null:false                   | 
  |place  | text       |                               |
  |memo   | text       |                               |
  |user   | references | null:false, foreign_key: true |
