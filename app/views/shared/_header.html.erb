@@ -13,12 +13,12 @@
   </div>
 
   <div class = 'header_right'>
-    <% if user_signed_in?%>
-    <div class = 'all_article'>
+     <div class = 'all_article'>
       <%= link_to "みんなの図鑑を見る", root_path%>
     </div>
+    <% if user_signed_in?%>
     <div class = 'my_article'>
-      <%= link_to "自分の図鑑を見る",user_path(current_user.id) %>
+      <%= link_to "自分の図鑑を見る",users_path%>
     </div>
     <div class = logout>
       <%= link_to 'ログアウト',  destroy_user_session_path, method: :delete %>

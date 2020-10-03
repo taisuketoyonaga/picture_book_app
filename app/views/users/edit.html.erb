@@ -1,8 +1,7 @@
-<%#= render "shared/header"%>
 <div class = "new-title">
 <h1>新しい生き物</h1>
 </div>
-<%= form_with model: @content,url:contents_path,locals: true do |f| %>
+<%= form_with model: @content,url:user_path,locals: true do |f| %>
 <%=f.label :image, "写真"%>
 <%= f.file_field :image ,class: "image-form"%>
 
@@ -23,7 +22,7 @@
 
 <div class = "date-form">
 <%=f.label :date, "見つけた日"%>
-<%= f.text_field :date, placeholder:"例)2020-09-12",class:"find-date"%>
+<%= f.text_field :date, class:"find-date"%>
 </div>
 
 <div class = "memo-form">
@@ -32,6 +31,6 @@
 </div>
 
 <div class = "submit-btn">
-<%=f.submit "図鑑に追加！" %>
+<%=f.submit "図鑑を編集！" %>
  </div>
 <% end %>

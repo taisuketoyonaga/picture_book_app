@@ -3,13 +3,13 @@
     <% if @content.length != 0 %>
       <% @content.each do |content|%>
       <div class = "item-list">
-        <%= link_to content_path(content.id) do%>  
+        <%= link_to user_path(content.id) do%>  
           <div class = "content-image">
             <%= image_tag content.image %>
          
           </div>
         <% end %>
-        <%= link_to "#{content.name}", content_path(content.id),class:'item_name' %> 
+        <%= link_to "#{content.name}", user_path(content.id),class:'item_name' %> 
            <%= @kind %>
       </div>
       <% end %>

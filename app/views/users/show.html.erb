@@ -1,12 +1,68 @@
 <div class = top-wrapper>
- <%= render 'shared/header'%>
+  <%= render "shared/header"%>
   <div class = "wrapper">
     <div class = "side_bar">
       <%= render "side_bar"%>
     </div>
-    <div class ="main">
-      <%=render "main"%>
-    </div>
+    <div class = "show-main">
+      <div class = "left-page">
+          <div class = "name_area">
+            <div class = "name-tag">
+            名前
+            </div>
+            <div class = "item-name">
+            <%= @content.name %>
+            </div>
+          </div>
+          <div class = "kind_area">
+            <div class = "kind-tag">
+             種類
+            </div>
+            <div class ="item-kind">
+            <%=Kind.data[@content.kind_id-1][:name] %>
+            </div>
+          </div>
+          <div class = "date_area">
+            <div class = "date-tag">
+            日にち
+            </div>
+            <div class ="item-date">
+            <%= @content.date %>
+            </div>
+          </div>
+          <div class = "place_area">
+            <div class ="place-tag">
+            場所
+            </div>
+            <div class = "item-place">
+            <%= @content.place%>
+            </div>
+          </div>
+          <% if current_user == @content.user%>
+          <div class = "edit_delete">
+            <div class = "edit-tag">
+            <%= link_to '図鑑を書き直す',edit_user_path(params[:id])%>
+            </div>
+            <div class = "delete-tag">
+            <%=link_to '記事を消す',user_path(params[:id]),method: :delete %>
+            </div>
+          </div>
+          <% end %>
+        </div>
+        <div class = "right-page">
+          <div class = "show-image">
+          <%= image_tag @content.image %>
+          </div>
+          <div class ="memo-area">
+            <div class = "memo-tag">
+            メモ：
+            </div>
+            <div class ="memo-content">
+            <%= @content.memo%>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
-  <%= render  "shared/footer"%>
+  <%= render  "footer"%>
 </div>

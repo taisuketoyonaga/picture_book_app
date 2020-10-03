@@ -8,7 +8,7 @@
     </div>
   </div>
         <%= search_form_for @q, url: search_contents_path do |f| %>
-                 <div class = 'name_search'>
+        <div class = 'name_search'>
         名前で探す
         <% f.label :name_cont %>
         <%= f.search_field :name_cont,placeholder: '名前を入力', class:'name_search_input' %>
