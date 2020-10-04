@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
 
   def index
     @content = Content.find(params[:content_id])
-    @comments = Comment.includes(:user)
+    @comments = @content.comments.includes(:user)
   end
   def create
     comments = Comment.create(comment_params)
