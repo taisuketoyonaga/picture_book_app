@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
   def index
     @content = Content.find(params[:content_id])
     @comments = @content.comments.includes(:user)
+   # binding.pry
   end
   def create
     comments = Comment.create(comment_params)

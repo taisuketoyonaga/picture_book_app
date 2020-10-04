@@ -30,3 +30,36 @@ font-size: 15px;
   width: 50%;
   padding: 0 6% 5% 8%;
 }
+.comment_form{
+  height: 100%;
+  width: 45%;
+  position: relative;
+  left: 18%;
+}
+.comment_form form{
+  padding: 10px ;
+  display: flex;
+  
+}
+.comment_input{
+  width: 70%;;
+}
+.comment_text{
+  height: 30px;
+  width: 100%;
+}
+.comment_submit{
+  width: 20%;
+}
+.comment_btn{
+  height: 30px;
+  width: 40px;
+  margin-left: 8px;
+}
+.need_login{
+  position: relative;
+  top: 10px;
+  left: 15%;
+  font-size: 20px;
+  color: burlywood;
+}

@@ -1,0 +1,18 @@
+<footer class = "footer">
+<% if user_signed_in? %>
+<div class = "comment_form">
+  <%= form_with model:@comment,url:content_comments_path(params[:content_id]),locals: true do |f| %>
+  <div class = 'comment_input'>
+  <%= f.text_area :comment ,class:"comment_text"%>
+  </div>
+  <div class = "comment_submit">
+  <%= f.submit "送信",class:"comment_btn"%>
+  <</div>>
+  <% end %>
+</div>
+ <% else %>
+  <div class = "need_login">
+  ログインするとコメントができます。
+  <div>
+<% end %>
+</footer>
