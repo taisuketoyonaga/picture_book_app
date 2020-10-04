@@ -1,13 +1,13 @@
 <footer class = "footer">
-<% if @content.user_previous.present?%>
-<div class = 'previous_page'>
-<%= link_to '前のページへ',user_path(@content.user_previous),class:'previous'%>
-</div>
-<%end%>
 <% if @content.user_next.present?%>
 <div class = 'next_page'>
-<%= link_to '次のページへ',user_path(@content.user_next),class:'next'%>
+<%= link_to '前のページへ',user_path(@content.user_next),class:'next'%>
 </div>
 <%end%>
-<div class="arrow"> </div>
+<% if @content.user_previous.present?%>
+<div class = 'previous_page'>
+<%= link_to '次のページへ',user_path(@content.user_previous),class:'previous'%>
+</div>
+<%end%>
+
 </footer>
