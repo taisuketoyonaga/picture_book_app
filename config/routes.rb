@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "contents#index"
 
   resources :contents do
+    resources :comments, only:[:create, :edit, :destroy]
     collection do
       get 'search'
     end
