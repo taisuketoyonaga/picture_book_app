@@ -30,7 +30,7 @@
   font-size: 30px;
 }
 .kind_area{
-  height: 20%;
+  height: 15%;
   width: 100%;
   display: flex;
 }
@@ -43,7 +43,7 @@
   width: 50%;
 }
 .date_area{
-  height: 20%;
+  height: 15%;
   width: 100%;
   display: flex;
 }
@@ -56,7 +56,7 @@
   width: 50%;
 }
 .place_area{
-  height: 20%;
+  height: 15%;
   width: 100%;
   display: flex;
 }
@@ -70,7 +70,7 @@
   width: 50%;
 }
 .edit_delete{
-  height: 20%;
+  height: 15%;
   width: 100%;
   display: flex;
 }
@@ -82,6 +82,10 @@
 .delete-tag{
   height: 100%;
   width: 50%;
+}
+.to_comment{
+  height: 15%;
+  width: 100%;
 }
 .right-page{
   height: 100%;
