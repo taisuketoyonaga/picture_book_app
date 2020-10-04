@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
 
-  def new
-    @comment = Comment.new    
+  def index
+    @content = Content.find(params[:content_id])
+    @comments = Comment.includes(:user)
   end
-
   def create
     comments = Comment.create(comment_params)
     if comment.save
