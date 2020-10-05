@@ -1,12 +1,12 @@
 class CommentsController < ApplicationController
-
   def index
     @content = Content.find(params[:content_id])
-    @comments = @content.comments.includes(:user)
+    @comments = @content.comments.includes(:user).order(created_at: "DESC")
   end
   def create
     comment = Comment.create(comment_params)
-    render jason:{post: comment }
+    render json:{post: comment }
+  
   end
 
  private
@@ -16,4 +16,3 @@ class CommentsController < ApplicationController
   end
   
 end
-

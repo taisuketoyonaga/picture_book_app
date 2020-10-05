@@ -1,13 +1,13 @@
 <footer class = "footer">
 <% if user_signed_in? %>
-<div class = "comment_form">
-  <%= form_with model:@comment,url:content_comments_path(params[:content_id]),locals: true do |f| %>
-  <div class = 'comment_input'>
+<div class = "comment_form" id = "comment_form" name = <%= @content.user.name %>>
+  <%= form_with model:@comment,url:content_comments_path(params[:content_id]), id:"form" do |f| %>
+  <div class = 'comment_input' id = comment_id data-id = <%="#{@content.id}"%>>
   <%= f.text_field :comment ,class:"comment_text"%>
   </div>
-  <div class = "comment_submit" id = "submit">
-  <%= f.submit "送信",class:"comment_btn"%>
-  <</div>>
+  <div class = "comment_submit" id = "submit" >
+  <%= f.submit "送信",class:"comment_btn", id:'submit_btn'%>
+  </div>
   <% end %>
 </div>
  <% else %>

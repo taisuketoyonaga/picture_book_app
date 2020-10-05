@@ -5,8 +5,10 @@
       </div>
       <div class = "comment-main">
       <div class = "comment_left-page">
+      <div id = "list" >
+      </div>
       <% @comments.each do |comment|%>
-      <div class = "comment_content">
+      <div class = "comment_content" >
         <div class = "comment_user">
           <%= "#{comment.user.name}さん：" %>
         </div>
