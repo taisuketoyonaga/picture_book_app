@@ -3,9 +3,9 @@
 <div class = "comment_form">
   <%= form_with model:@comment,url:content_comments_path(params[:content_id]),locals: true do |f| %>
   <div class = 'comment_input'>
-  <%= f.text_area :comment ,class:"comment_text"%>
+  <%= f.text_field :comment ,class:"comment_text"%>
   </div>
-  <div class = "comment_submit">
+  <div class = "comment_submit" id = "submit">
   <%= f.submit "送信",class:"comment_btn"%>
   <</div>>
   <% end %>
