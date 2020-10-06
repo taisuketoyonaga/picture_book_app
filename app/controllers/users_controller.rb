@@ -26,10 +26,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @content.update(content_parameter)
-      redirect_to users_path
-    else
-      render :edit
+   if  @content.update(content_parameter)
+      redirect_to user_path(id: params[:id])
     end
   end
 

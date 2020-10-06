@@ -25,11 +25,8 @@ class ContentsController < ApplicationController
   end
 
   def update
-    if @content.update(content_parameter)
-      redirect_to root_path
-    else
-      render :edit
-    end
+     @content.update(content_parameter)
+      redirect_to content_path(id: params[:id])
   end
 
   def destroy

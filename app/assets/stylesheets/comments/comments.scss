@@ -1,0 +1,99 @@
+.comment-main{
+  width: 100%;
+  background-image:image-url('book3.png') ;
+  background-size:100% 100% ;
+  display: flex;
+  padding:5% 0 5% 0;
+}
+.comment_left-page{
+  height: 100%;
+  width: 50%;
+  padding: 0 5% 5% 12%;
+  overflow: scroll;
+}
+.comment_content{
+  height: 20%;
+  width: 100%;
+  margin:5px 5px 10px -15px ;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment_wrapper{
+width: 90%;
+height: 100%;
+border: 0.5px solid rgb(167, 154, 132);
+border-radius: 10px;
+overflow: scroll;
+}
+.comment_user{
+  font-size: small;
+}
+.comment{
+font-size: 15px;
+flex-wrap: wrap;
+
+}
+.comment_delete{
+  width: 10%;
+  display: flex;
+  align-items: center;
+}
+.delete_icon a{
+ text-decoration: none;
+}
+
+
+.comment_right-page{
+  height: 100%;
+  width: 50%;
+  padding: 0 6% 5% 8%;
+}
+.comment_form{
+  height: 100%;
+  width: 45%;
+  position: relative;
+  left: 18%;
+}
+.comment_form form{
+  padding: 10px ;
+  display: flex;
+  
+}
+.comment_input{
+  width: 70%;;
+}
+.comment_text{
+  height: 30px;
+  width: 100%;
+}
+.comment_submit{
+  width: 20%;
+}
+.comment_btn{
+  height: 30px;
+  width: 40px;
+  margin-left: 8px;
+}
+.return_btn{
+  position: relative;
+  top: 10px;
+  left: 10%;
+  background-color: burlywood;
+  height: 30px;
+  width: 90px;
+  padding-top: 3px 0 0 3px;
+  border:2px solid darkgreen;
+  border-radius: 15px;
+}
+.return_btn a{
+  text-decoration: none;
+  color: black;
+}
+.need_login{
+  position: relative;
+  top: 10px;
+  left: 15%;
+  font-size: 20px;
+  color: burlywood;
+}
