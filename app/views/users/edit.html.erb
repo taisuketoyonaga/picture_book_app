@@ -1,7 +1,7 @@
 <div class = "new-title">
 <h1>図鑑編集</h1>
 </div>
-<%= form_with model: @content,url:user_path(id:@content.id),locals: true do |f| %>
+<%= form_with model: @content,url:user_path(id:@content.id),local: true do |f| %>
 <%=f.label :image, "写真"%>
 <%= f.file_field :image ,class: "image-form"%>
 
