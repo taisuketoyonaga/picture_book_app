@@ -7,15 +7,28 @@
       <div class = "comment_left-page">
       <div id = "list" >
       </div>
-      <% @comments.each do |comment|%>
+      <% @comments.each do |comment|%> 
       <div class = "comment_content" >
-        <div class = "comment_user">
-          <%= "#{comment.user.name}さん：" %>
+         <div class = comment_wrapper> 
+          <div class = "comment_user">
+            <%= "#{comment.user.name}さん：" %>
+          </div>
+          <div class = "comment">
+            <%= comment.comment%>
+          </div>
         </div>
-        <div class = "comment">
-          <%= comment.comment%>
+          <div class = "comment_delete">
+            <div class = "delete_icon">
+            ▽
+            </div>
+            <div class = "delete_btn" >
+            削除
+            </div>
         </div>
       </div>
+      
+
+      
       <% end %>
       </div>
         <div class = "comment_right-page">
