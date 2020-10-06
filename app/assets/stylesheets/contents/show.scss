@@ -30,7 +30,7 @@
   font-size: 30px;
 }
 .kind_area{
-  height: 15%;
+  height: 12%;
   width: 100%;
   display: flex;
 }
@@ -43,7 +43,7 @@
   width: 50%;
 }
 .date_area{
-  height: 15%;
+  height: 12%;
   width: 100%;
   display: flex;
 }
@@ -56,7 +56,7 @@
   width: 50%;
 }
 .place_area{
-  height: 15%;
+  height: 12%;
   width: 100%;
   display: flex;
 }
@@ -69,8 +69,22 @@
   height: 100%;
   width: 50%;
 }
+.user_name_area{
+  height: 12%;
+  width: 100%;
+  display: flex;
+}
+.user_name-tag{
+  height: 100%;
+  width: 50%;
+}
+
+.user_name{
+  height: 100%;
+  width: 50%;
+}
 .edit_delete{
-  height: 15%;
+  height: 12%;
   width: 100%;
   display: flex;
 }
@@ -84,7 +98,7 @@
   width: 50%;
 }
 .to_comment{
-  height: 15%;
+  height: 12%;
   width: 100%;
 }
 .right-page{
