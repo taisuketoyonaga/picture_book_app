@@ -19,7 +19,7 @@
         </div>
           <div class = "comment_delete">
             <div class = "delete_icon">
-            ▽
+            <%= link_to "▽", "/contents/#{comment.content_id}/comments/#{comment.id}",method: :delete, locals: true %>
             </div>
             <div class = "delete_btn" >
             削除

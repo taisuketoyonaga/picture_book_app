@@ -3,10 +3,16 @@ class CommentsController < ApplicationController
     @content = Content.find(params[:content_id])
     @comments = @content.comments.includes(:user).order(created_at: "DESC")
   end
+
   def create
     comment = Comment.create(comment_params)
     render json:{post: comment }
-  
+  end
+
+  def destroy
+    comment = Comment.find(params[:id])
+    comment.destroy
+    render json:{delete: comment}
   end
 
  private

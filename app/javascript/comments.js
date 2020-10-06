@@ -20,14 +20,23 @@ comment = function(){
       const formText = document.getElementById('comment')
       console.log(item)
       const HTML = `
-      <div class = comment_content>
+      <div class = "comment_content" >
+      <div class = comment_wrapper>
         <div class = "comment_user">
          ${userName}さん：
         </div>
         <div class = "comment">
          ${item.comment}
         </div>
-      </div>`;
+      </div>
+      <div class = "comment_delete">
+      <div class = "delete_icon">
+      ▽
+      </div>
+      <div class = "delete_btn" >
+      削除
+      </div>
+   </div>`;
       list.insertAdjacentHTML("afterend",HTML);
       formText.value = "";
     };
@@ -36,3 +45,4 @@ comment = function(){
   });
 }  
 window.addEventListener('load',comment)
+
