@@ -1,7 +1,7 @@
 .footer{
   height: 10vh ;
   display: flex;  
-position: relative;
+  position: relative;
 }
 .next_page{
   height: 100%;
