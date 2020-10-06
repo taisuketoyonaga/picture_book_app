@@ -1,4 +1,4 @@
-comment = function(){
+function comment(){
   const submit = document.getElementById('submit_btn');
   submit.addEventListener('click',(e)=>{
     const contentId = document.getElementById("comment_id")
@@ -28,13 +28,6 @@ comment = function(){
         <div class = "comment">
          ${item.comment}
         </div>
-      </div>
-      <div class = "comment_delete">
-      <div class = "delete_icon">
-      ▽
-      </div>
-      <div class = "delete_btn" >
-      削除
       </div>
    </div>`;
       list.insertAdjacentHTML("afterend",HTML);

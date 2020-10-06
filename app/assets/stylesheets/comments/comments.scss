@@ -37,13 +37,12 @@ flex-wrap: wrap;
 .comment_delete{
   width: 10%;
   display: flex;
+  align-items: center;
 }
-.delete_icon{
+.delete_icon a{
+ text-decoration: none;
+}
 
-}
-.delete_btn{
-  display: none;
-}
 
 .comment_right-page{
   height: 100%;

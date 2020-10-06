@@ -11,8 +11,9 @@ class CommentsController < ApplicationController
 
   def destroy
     comment = Comment.find(params[:id])
-    comment.destroy
-    render json:{delete: comment}
+    if comment.destroy
+      redirect_to content_comments_path(content_id:params[:content_id])
+    end
   end
 
  private

@@ -17,18 +17,14 @@
             <%= comment.comment%>
           </div>
         </div>
+        <% if current_user.id == comment.user.id%>
           <div class = "comment_delete">
-            <div class = "delete_icon">
-            <%= link_to "▽", "/contents/#{comment.content_id}/comments/#{comment.id}",method: :delete, locals: true %>
+            <div class = "delete_icon" type="hidden">
+            <%= link_to "削除", "/contents/#{comment.content_id}/comments/#{comment.id}",method: :delete, id:"icon" %>
             </div>
-            <div class = "delete_btn" >
-            削除
-            </div>
-        </div>
+          </div>
+        <% end %>
       </div>
-      
-
-      
       <% end %>
       </div>
         <div class = "comment_right-page">
