@@ -6,10 +6,12 @@
 .wrapper{
   display: flex;
   height:70vh;
+  padding-right: 40px ;
   
 }
 .side_bar{
-  width: 15%;  
+  width: 15%; 
+  margin-right: 30px; 
 }
 .main{
   width: 85%;

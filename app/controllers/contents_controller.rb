@@ -2,7 +2,7 @@ class ContentsController < ApplicationController
   before_action :set_params, only: [:show, :edit, :update, :destroy]
   before_action :search_content, only: [:index, :show, :search]
   def index
-    @content = Content.all.order(created_at:'DESC')
+    @content = Content.all.order(created_at: 'DESC')
   end
 
   def new
@@ -25,8 +25,8 @@ class ContentsController < ApplicationController
   end
 
   def update
-     @content.update(content_parameter)
-      redirect_to content_path(id: params[:id])
+    @content.update(content_parameter)
+    redirect_to content_path(id: params[:id])
   end
 
   def destroy

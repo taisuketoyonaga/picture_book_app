@@ -19,6 +19,8 @@
  
  - 名前、種類、場所、日にちで記事を検索することができる。
 
+ - 記事にコメントを投稿することができる。
+
 ## バージョン
  - ruby 2.6.5
  - rails 6.0.0
@@ -39,6 +41,26 @@
  - 登録機能
  - ログイン・ログアウト機能
 
+### コメント関連
+ - コメント登録機能
+ - コメント削除機能
+
+
+## 工夫した点
+ - ransackを使用した検索機能の実装
+ - コメント機能は非同期で投稿できるように実装
+ - 画像データはAWS S3を利用して保存
+ - 図鑑を開いているようなトップ画面のビューの作成
+
+### 今後の改善点
+
+- ログイン・サインアップページ、記事新規登録・編集のビューを整える
+- ビューのレスポンシブ化
+- API（今のところMediaWikiを検討)を使用して、生き物の概要を表示できる機能する。
+
+
+
+
 
 
 
@@ -47,13 +69,10 @@
  |---------|--------|------------|
  |name     | string | null:false |
  |email    | string | null:false |
- |profile  | text   |            |
- 
 
 association
 - has_many :contents
 - has_many :comments
-
 
 ### contents テーブル
  |column | type       | options                       |
@@ -69,3 +88,13 @@ association
 - belongs_to :user
 - has_one_attached :image
 
+### usersテーブル
+ | column    | type       |  options                      |
+ |-----------|------------|-------------------------------|
+ |comment    | text       | null:false                    |
+ |user_id    | references | null:false, foreign_key: true |
+ |content_id | references | null:false, foreign_key: true |
+
+ association
+- belongs_to :user
+- belongs_to :content

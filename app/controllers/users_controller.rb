@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :search_content, only: [:index, :show, :search]
   before_action :set_params, only: [:edit, :update, :show, :destroy]
   def index
-    @content = Content.where(user_id: current_user.id).order(created_at: "DESC")
+    @content = Content.where(user_id: current_user.id).order(created_at: 'DESC')
   end
 
   def new
@@ -26,9 +26,7 @@ class UsersController < ApplicationController
   end
 
   def update
-   if  @content.update(content_parameter)
-      redirect_to user_path(id: params[:id])
-    end
+    redirect_to user_path(id: params[:id]) if @content.update(content_parameter)
   end
 
   def search
