@@ -30,8 +30,27 @@ RSpec.describe "Users", type: :system do
         # サインアップページへ遷移するボタンや、ログインページへ遷移するボタンが表示されていないことを確認する
         expect(page).to have_no_content "ログイン"
         expect(page).to have_no_content "新規登録"
+      end
+    end
+    context "ユーザ登録ができない場合" do
+      it "ユーザー情報を正しく登録しなければ登録できない" do
+        # トップページに遷移する
+        visit root_path
+        # サインアップのボタンがある事を確認する
+        expect(page).to have_content ('新規登録')
+        # 新規登録ページに遷移する
+        visit new_user_registration_path
+        # ユーザー情報を登録する
+        fill_in 'Name', with: ""
+        fill_in 'Email', with: ""
+        fill_in 'Password', with: ""
+        fill_in 'Password confirmation', with: ""
+        # サインアップボタンを押してもユーザーモデルのカウントが上がらない事を確認
+        expect{find('input[name="commit"]').click}.to change {User.count}.by(0)
+        # 新規登録ページに戻される事を確認する
+        expect(current_path).to eq "/users"
+       end
     end
   end
-      end
 
 end
