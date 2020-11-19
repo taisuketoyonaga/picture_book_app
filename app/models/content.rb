@@ -7,4 +7,5 @@ class Content < ApplicationRecord
 
   validates :name, presence: true
   validates :kind_id, presence: true
+  validates :image, presence: true
 end
