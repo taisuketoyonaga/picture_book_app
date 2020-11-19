@@ -52,5 +52,34 @@ RSpec.describe "Users", type: :system do
        end
     end
   end
-
+  describe "ログイン" , type: :system do
+    before do
+      @user = FactoryBot.create(:user)
+    end
+    context "ログインができる場合" do
+      it "正しいユーザー情報を登録すればログインできて、トップページに遷移する" do
+        visit root_path
+        expect(page).to have_content "ログイン"
+        visit new_user_session_path
+        fill_in "Email", with: @user.email
+        fill_in "Password", with: @user.password
+        find('input[name="commit"]').click
+        expect(current_path).to eq root_path
+        expect(page).to have_no_content "ログイン"
+        expect(page).to have_no_content "新規登録"
+      end
+    end
+    context "ログインができない場合" do
+      it "正しいユーザー情報を登録しなければ、ログインせずログインページに戻る" do
+        visit root_path
+        expect(page).to have_content "ログイン"
+        visit new_user_session_path
+        fill_in "Email", with: "aaa@aaa"
+        fill_in "Password", with: "aaaaaaaa"
+        find('input[name="commit"]').click
+        expect(current_path).to eq new_user_session_path
+        
+      end
+    end
+  end
 end
